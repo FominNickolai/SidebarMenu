@@ -11,6 +11,7 @@ import UIKit
 class NewsTableViewController: UITableViewController {
 
     @IBOutlet var menuButton:UIBarButtonItem!
+    @IBOutlet var extraButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,11 @@ class NewsTableViewController: UITableViewController {
         if revealViewController() != nil {
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController().rightViewRevealWidth = 150
+            extraButton.target = revealViewController()
+            extraButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            revealViewController().rearViewRevealWidth = 62
         }
     }
 
@@ -67,6 +72,10 @@ class NewsTableViewController: UITableViewController {
         }
 
         return cell
+    }
+    
+    deinit {
+        print("NewsTableViewController deinit")
     }
 
 
