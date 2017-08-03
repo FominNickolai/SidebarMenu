@@ -1,4 +1,13 @@
 //
-//  Use this file to import your target's public headers that you would like to expose to Swift.
+//  SlidebarMenu-Bridging-Header.h
+//  SlidebarMenu
 //
-#import "SWRevealViewController.h"
+//  Created by Fomin Mykola on 8/3/17.
+//  Copyright © 2017 AppCoda. All rights reserved.
+//
+
+#ifndef SlidebarMenu_Bridging_Header_h
+#define SlidebarMenu_Bridging_Header_h
+
+
+#endif /* SlidebarMenu_Bridging_Header_h */
