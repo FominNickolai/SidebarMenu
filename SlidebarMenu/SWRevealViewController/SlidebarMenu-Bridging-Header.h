@@ -9,5 +9,6 @@
 #ifndef SlidebarMenu_Bridging_Header_h
 #define SlidebarMenu_Bridging_Header_h
 
+#import "SWRevealViewController.h"
 
 #endif /* SlidebarMenu_Bridging_Header_h */
