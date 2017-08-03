@@ -15,11 +15,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if revealViewController() != nil {
-            menuButton.target = revealViewController()
-            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
+        addSideBarMenu(leftMenuButton: menuButton)
     }
 
     override func didReceiveMemoryWarning() {

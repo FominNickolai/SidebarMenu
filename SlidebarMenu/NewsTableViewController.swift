@@ -19,15 +19,7 @@ class NewsTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 242.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        if revealViewController() != nil {
-            menuButton.target = revealViewController()
-            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            revealViewController().rightViewRevealWidth = 150
-            extraButton.target = revealViewController()
-            extraButton.action = #selector(SWRevealViewController.rightRevealToggle(_:))
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            revealViewController().rearViewRevealWidth = 62
-        }
+        addSideBarMenu(leftMenuButton: menuButton, rightMenuButton: extraButton)
     }
 
     override func didReceiveMemoryWarning() {
